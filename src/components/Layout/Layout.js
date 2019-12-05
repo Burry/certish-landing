@@ -18,10 +18,9 @@
 
 import { func, node, shape, oneOfType, arrayOf } from 'prop-types';
 import { Box, Grommet, Text } from 'grommet';
-import _Header from './Header';
 import _Footer from './Footer';
 
-const Layout = ({ Header, Footer, children, theme }) => (
+const Layout = ({ Footer, children, theme }) => (
     <Grommet theme={theme} className="full-height">
         <Box
             as="noscript"
@@ -35,7 +34,6 @@ const Layout = ({ Header, Footer, children, theme }) => (
             </Text>
         </Box>
         <Box fill flex className="full-height">
-            <Header />
             <Box fill id="main-content" role="main">
                 {children}
             </Box>
@@ -45,14 +43,12 @@ const Layout = ({ Header, Footer, children, theme }) => (
 );
 
 Layout.propTypes = {
-    Header: func,
     Footer: func,
     children: oneOfType([node, arrayOf(node)]).isRequired,
     theme: shape({}).isRequired
 };
 
 Layout.defaultProps = {
-    Header: _Header,
     Footer: _Footer
 };
 

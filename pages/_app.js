@@ -27,7 +27,6 @@ const hostname = 'https://certi.sh';
 const description =
     'A free digital notary: the public key infrastructure for the public';
 const brandColor = '#f00';
-const textSelectionStyle = `background:${brandColor};color:#FFF;`;
 
 const defaultLayoutProps = {
     fill: false,
@@ -130,9 +129,7 @@ class App extends NextApp {
                     {/* PWA web manifest */}
                     <link rel="manifest" href="/static/site.webmanifest" />
                     {/* Text selection style */}
-                    <style>
-                        {`body,html{margin:0;padding:0;}::selection{${textSelectionStyle}}::-moz-selection{${textSelectionStyle}}`}
-                    </style>
+                    <style>{`body,html{margin:0;padding:0;}`}</style>
                 </Helmet>
                 <Layout {...layoutProps}>
                     <Component {...pageProps} />

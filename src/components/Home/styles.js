@@ -16,12 +16,18 @@
  * along with certish. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import micro from 'micro';
+import css from 'styled-jsx/css';
 
-export default micro((req, res) => {
-    res.status(200).json({
-        body: req.body,
-        query: req.query,
-        cookies: req.cookies
-    });
-});
+const styles = css.global`
+    body: {
+        margin: 30px;
+    }
+
+    .logo {
+        position: relative;
+        height: 3.25rem;
+        top: 0.75rem;
+    }
+`;
+
+export default styles;

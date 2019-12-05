@@ -18,12 +18,14 @@
 
 import { Helmet } from 'react-helmet';
 import { Box, Heading, Text } from 'grommet';
+import HeaderLogo from '../src/components/HeaderLogo';
 
 const Terms = () => (
     <>
-        <Box pad={{ horizontal: 'medium', bottom: 'large' }}>
+        <Box pad="large">
             <Helmet title="Terms" />
-            <Heading margin={{ top: 'none', bottom: 'small' }}>Terms</Heading>
+            <HeaderLogo />
+            <Heading>Terms</Heading>
             <Text>TBD</Text>
         </Box>
     </>

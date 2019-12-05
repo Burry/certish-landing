@@ -20,6 +20,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Box, Heading, Paragraph } from 'grommet';
 import { AnchorLink } from '../src/components/Link';
+import HeaderLogo from '../src/components/HeaderLogo';
 
 const TightHeading = props => (
     <Heading margin={{ vertical: 'small' }} {...props} />
@@ -28,9 +29,10 @@ const WideParagraph = props => <Paragraph fill {...props} />;
 
 const Privacy = () => (
     <>
-        <Box pad={{ horizontal: 'medium', bottom: 'large' }}>
+        <Box pad="large">
             <Helmet title="Privacy" />
-            <Heading margin={{ top: 'none', bottom: 'small' }}>Privacy</Heading>
+            <HeaderLogo />
+            <Heading>Privacy</Heading>
             <WideParagraph>
                 We believe that your data is your business. When you use certish
                 to sign or verify data, the contents of that data never leave

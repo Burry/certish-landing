@@ -16,24 +16,18 @@
  * along with certish. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { string } from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { uniqueNamesGenerator } from 'unique-names-generator';
-import Well from '../src/components/Well';
+import { Image } from 'grommet';
+import { AnchorLink } from './Link';
 
-const Sign = ({ pseudonym }) => (
-    <>
-        <Helmet title="Sign" />
-        <Well verb="sign" pseudonym={pseudonym} />
-    </>
+const HeaderLogo = () => (
+    <AnchorLink href="/">
+        <Image
+            src="/static/img/logo.svg"
+            title="certish"
+            a11yTitle="certish"
+            height="30"
+        />
+    </AnchorLink>
 );
 
-Sign.getInitialProps = async () => ({
-    pseudonym: uniqueNamesGenerator({ length: 2, separator: '-' })
-});
-
-Sign.propTypes = {
-    pseudonym: string.isRequired
-};
-
-export default Sign;
+export default HeaderLogo;
