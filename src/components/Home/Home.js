@@ -116,7 +116,7 @@ const Home = () => (
             </Box>
             <Box alignSelf="center" width="medium">
                 <MailchimpSubscribe
-                    url="https://certi.us4.list-manage.com/subscribe/post?u=0a73482fc09245110d3e219df&amp;id=b73a88db49"
+                    url="https://certi.us4.list-manage.com/subscribe/post?u=0a73482fc09245110d3e219df&id=b73a88db49"
                     render={({ subscribe, status, message }) => (
                         <SubscribeForm
                             status={status}

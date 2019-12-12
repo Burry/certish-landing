@@ -36,7 +36,7 @@ const SubscribeForm = ({ status, message, onValidated }) => {
         if (event) event.preventDefault();
         return emailIsValid
             ? onValidated({
-                  EMAIL: email.value
+                  EMAIL: email
               })
             : null;
     };
